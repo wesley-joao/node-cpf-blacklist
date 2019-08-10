@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <%include ../partials/head%>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+      <%include ../partials/header%> 
+      <main class="mdl-layout__content" id="app" >
+        <div class="mdl-grid">
+            <div class="dl-cell mdl-cell--12-col" id="form">            
+              <br><br><br><br>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="cpfInput">
+                <label class="mdl-textfield__label" for="cpfInput">CPF</label>
+              </div>
+
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnQuery">
+              Consultar
+              </button>
+              <br>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnBlock">
+                Bloquear
+              </button>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnFree">
+                Remover
+              </button>
+              <br><br><br><br>
+
+              <div id="message">
+                Mensagem de teste
+              </div>
+            </div>
+        </div>   
+      </main>
+    </div>
+    <%include ../partials/footer%>  
+    <script src="js/index.js"></script>
+  </body>
+</html>

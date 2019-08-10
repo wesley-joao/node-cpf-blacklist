@@ -170,3 +170,15 @@ describe('Route DELETE /api/v1/cpf/:cpf', () => {
       });
   });
 });
+
+/* Busca status da aplicacao */
+describe('Route GET /api/v1/status', () => {
+  it('Should return application status', (done) => {
+    request(constants.API_V1)
+      .get('/status')
+      .end((err, res) => {
+        expect(res.status).to.eql(200);
+        done();
+      });
+  });
+});

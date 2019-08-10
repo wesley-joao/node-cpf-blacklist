@@ -1,0 +1,44 @@
+body{
+	display: flex;
+	flex-direction: column;
+}
+.mdl-layout__content {
+	flex: 1 0 auto
+}
+.mdl-layout {
+	background-color: rgba(177, 177, 177, 0.2);
+}
+
+.mdl-snackbar{
+	background-color: brown;
+}
+
+.menuItemDrawer{
+	color: black !important;
+}
+header .material-icons{
+	color:black !important;
+}
+.menuItem{
+	color:black  !important;
+}
+.mdl-navigation > .menuItem:hover{
+	color:red !important;
+}
+
+.mdl-mini-footer{
+	background-color:rgba(5, 100, 70, 1);
+	color: white
+}
+.mdl-mini-footer > .mdl-mini-footer--link-list a {
+	font-size: 13px;
+}
+.mdl-mini-footer--link-list > li:hover{
+	color: red;
+}
+
+footer{
+	padding-top: 10px !important;
+	height: 5px;
+	background-color:rgba(5, 100, 70, 1);
+}
