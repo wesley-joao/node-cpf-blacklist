@@ -45,12 +45,12 @@ exports.findOne = async (req, res) => {
 
     if (!cpf) {
       return res.status(404).json({
-        cpf: constants.MSG_FREE,
+        msg: constants.MSG_FREE,
       });
     }
 
     return res.status(200).json({
-      cpf: constants.MSG_BLOCK,
+      msg: constants.MSG_BLOCK,
     });
   } catch (error) {
     return res.status(500).json({
@@ -61,9 +61,9 @@ exports.findOne = async (req, res) => {
 
 exports.findAll = async (req, res) => {
   try {
-    const cpf = await Blacklist.findAll({ attributes: ['cpf', 'createdDate'] });
+    const cpfs = await Blacklist.findAll({ attributes: ['cpf', 'createdDate'] });
     res.status(200).json({
-      cpf,
+      cpfs,
     });
   } catch (error) {
     res.status(500).json({

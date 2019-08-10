@@ -9,3 +9,21 @@
 #btnFree {
 	background-color: green;
 }
+
+#app{
+	font-size: 18px;
+}
+
+#message{
+	height: 20%; 
+	text-align: center;
+	padding-top: 5%;
+}
+
+.messageGreen{
+	background-color: #d4edda;
+}
+
+.messageRed{	
+	background-color: #f8d7da;
+}

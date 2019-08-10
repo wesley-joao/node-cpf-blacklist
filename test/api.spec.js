@@ -74,7 +74,7 @@ describe('Route GET /api/v1/cpf/:cpf', () => {
       .get(`/cpf/${cpfTest.free.cpf}`)
       .end((err, res) => {
         expect(res.status).to.eql(200);
-        expect(res.body.cpf).to.eql(constants.MSG_BLOCK);
+        expect(res.body.msg).to.eql(constants.MSG_BLOCK);
         done();
       });
   });
@@ -84,7 +84,7 @@ describe('Route GET /api/v1/cpf/:cpf', () => {
       .get(`/cpf/${cpfTest.freeWithoutFormat.cpf}`)
       .end((err, res) => {
         expect(res.status).to.eql(200);
-        expect(res.body.cpf).to.eql(constants.MSG_BLOCK);
+        expect(res.body.msg).to.eql(constants.MSG_BLOCK);
         done();
       });
   });
@@ -97,7 +97,7 @@ describe('Route GET /api/v1/cpf/:cpf', () => {
       .get(`/cpf/${cpfTest.blocked.cpf}`)
       .end((err, res) => {
         expect(res.status).to.eql(404);
-        expect(res.body.cpf).to.eql(constants.MSG_FREE);
+        expect(res.body.msg).to.eql(constants.MSG_FREE);
         done();
       });
   });
@@ -107,7 +107,7 @@ describe('Route GET /api/v1/cpf/:cpf', () => {
       .get(`/cpf/${cpfTest.blockedWithoutFormat.cpf}`)
       .end((err, res) => {
         expect(res.status).to.eql(404);
-        expect(res.body.cpf).to.eql(constants.MSG_FREE);
+        expect(res.body.msg).to.eql(constants.MSG_FREE);
         done();
       });
   });

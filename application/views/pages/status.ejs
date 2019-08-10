@@ -13,19 +13,25 @@
             <div class="mdl-cell mdl-cell--12-col" id="status">
               <br><br><br><br>
               <div>
-                Tempo em execucao:
-                <span id="uptime"></span> <br/><br/>
-                Número de consultas realizada:
-                <span id="queriesExecuted"></span><br><br/>
-                Número de CPFs na blacklist:
-                <span id="blockedCpfs"></span><br><br/>
+                Tempo em execucao: 
+                <span><%=uptime%></span> <br/><br/>
+                Número de consultas realizada: 
+                <span> <%=queriesExecuted%> </span><br><br/>
+                Número de CPFs na blacklist: 
+                <span><%=cpfsOnBlacklist%> </span><br><br/>
+
+                Total de memória alocada: 
+                <span><%=memoryUsed.total%> </span><br><br/>
+
+                Memória utilizada:
+                <span><%=memoryUsed.used%> </span><br><br/>
+
+                
               </div> 
             </div>
           </div>
       </main>
     </div>
     <%include ../partials/footer%>
-
-    <script src="js/status.js"></script>
   </body>
 </html>

@@ -38,7 +38,7 @@ exports.getCpf = () => {
 };
 
 exports.returnError = () => {
-  this.res.status(404).json({
+  this.res.status(422).json({
     msg: constants.MSG_CPF_NOT_VALID,
   });
 };

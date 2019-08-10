@@ -8,29 +8,31 @@
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
       <%include ../partials/header%> 
-      <main class="mdl-layout__content" id="app" >
+      <main class="mdl-layout__content" id="app">
         <div class="mdl-grid">
             <div class="dl-cell mdl-cell--12-col" id="form">            
-              <br><br><br><br>
+              <br><br><br><br>              
+
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="cpfInput">
+                <input class="mdl-textfield__input" type="text" id="cpfInput" v-model="cpf"  v-mask="'###.###.###-##'">
                 <label class="mdl-textfield__label" for="cpfInput">CPF</label>
               </div>
 
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnQuery">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnQuery" @click="searchInBlacklist">
               Consultar
               </button>
-              <br>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnBlock">
+              <br><br>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnBlock" @click="addToBlacklist">
                 Bloquear
               </button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnFree">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="btnFree" @click="deleteFromBlacklist">
                 Remover
               </button>
               <br><br><br><br>
 
-              <div id="message">
-                Mensagem de teste
+              <div id="message" :class="messageClass">
+                {{msg}}
+                <br>                
               </div>
             </div>
         </div>   

@@ -5,7 +5,11 @@
 		"describe": true,
 		"it": true,
 		"expect": true,
-		"request": true
+		"request": true,
+		"swal": true,
+		"Vue": true,
+		"VueMask": true,
+		"axios": true
 	},
 
 	"parserOptions": {
