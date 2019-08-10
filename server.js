@@ -18,4 +18,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'application/views'));
 app.use(express.static(path.join(__dirname, 'application/public')));
 
+/* Tratando erros */
+const errorController = require('./application/controllers/errorController');
+
+app.use(errorController.get404);
+app.use(errorController.internalServerError);
+
+
 app.listen(3000);

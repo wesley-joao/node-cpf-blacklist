@@ -182,3 +182,16 @@ describe('Route GET /api/v1/status', () => {
       });
   });
 });
+
+/* Tenta requisitar rota que não existente */
+describe('Route invalid', () => {
+  it('Should return error 404', (done) => {
+    request(constants.API_V1)
+      .get('/notvalidroute')
+      .end((err, res) => {
+        expect(res.status).to.eql(404);
+        expect(res.body.msg).to.eql(constants.REQUEST_NOT_FOUND);
+        done();
+      });
+  });
+});
