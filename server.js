@@ -30,4 +30,4 @@ app.use(errorController.get404);
 app.use(errorController.internalServerError);
 
 /* Iniciando servidor */
-app.listen(3000);
+app.listen(3000, '0.0.0.0');

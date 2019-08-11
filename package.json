@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha 'test/*.spec.js'",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "lint": "eslint '**/*.js'",
     "lint:fix": "eslint '**/*.js' --fix"
   },
-  "author": "João Wesley",
+  "author": "João Wesley <joaowesleysilveira@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "apidoc": "^0.17.7",
