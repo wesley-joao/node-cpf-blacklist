@@ -9,7 +9,7 @@
 		"swal": true,
 		"Vue": true,
 		"VueMask": true,
-		"axios": true
+		"axios": true	
 	},
 
 	"parserOptions": {

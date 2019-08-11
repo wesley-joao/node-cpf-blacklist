@@ -13,7 +13,7 @@ exports.add = async (req, res) => {
     let msg = { msg: error.errors };
 
     if (error.errors[0].validatorKey === 'not_unique') {
-      msg = { msg: constants.MSG_CPF_ADDED_BLACKLIST };
+      msg = { msg: constants.MSG_CPF_ALREADY_ON_BLACKLIST };
     }
 
     return res.status(500).json(msg);
