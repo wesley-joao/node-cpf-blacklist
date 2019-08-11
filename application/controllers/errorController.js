@@ -4,7 +4,7 @@ exports.get404 = (req, res) => {
   if (req.url.search('/api/v1') === 0) {
     return res.status(404).json({ msg: constants.REQUEST_NOT_FOUND });
   }
-  return res.status(404).render('pages/404');
+  res.status(404).render('pages/404');
 };
 
 exports.internalServerError = (req, res) => {
